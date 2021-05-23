@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: food-master
-    namespace: my-demo
+    namespace: food
     labels:
       app: food-master
 spec:
@@ -18,7 +18,7 @@ spec:
      spec:
        containers:
          - name: food-master
-           image: docker push 156739282338.dkr.ecr.ap-south-1.amazonaws.com/sam:latest
+           image: docker push 156739282338.dkr.ecr.ap-south-1.amazonaws.com/harsh:latest
            imagePullPolicy: "Always"
            ports:
            - containerPort: 80
